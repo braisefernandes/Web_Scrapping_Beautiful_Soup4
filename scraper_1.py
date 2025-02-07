@@ -2,7 +2,8 @@ import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 
-req = requests.get("https://www.geeksforgeeks.org/courses/")
+link = input("Enter a link: ")
+req = requests.get(link)
 soup = BeautifulSoup(req.content, 'html.parser')
 
 courses = []
